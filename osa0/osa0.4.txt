@@ -1,0 +1,18 @@
+kayttaja->selain:
+  note left of selain
+  kayttaja kirjoittaa osoiteriville
+  https://studies.cs.helsinki.fi/exampleapp/spa
+  end note
+
+selain->palvelin: GET https://studies.cs.helsinki.fi/exampleapp/spa
+palvelin-->selain: status 200 HTML-koodi
+selain->palvelin: GET https://studies.cs.helsinki.fi/exampleapp/main.css
+palvelin-->selain: status 200 main.css
+selain->palvelin: GET https://studies.cs.helsinki.fi/exampleapp/spa.js
+palvelin->selain: status 200 spa.js
+
+selain->palvelin: GET https://studies.cs.helsinki.fi/exampleapp/data.json
+palvelin-->selain: status 200 data.json
+  note left of palvelin:
+  selain paivitetaan nayttamaan data.json-tiedoston sisalto
+  end note
